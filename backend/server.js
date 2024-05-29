@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swaggerConfig');
 const Note = require('./models/Note'); // Stelle sicher, dass der Pfad korrekt ist!
+const cors = require('cors');
+app.use(cors());
 
 // Verbinden zur Datenbank
 async function connectDB() {
